@@ -17,6 +17,7 @@ db_chain = SQLDatabaseChain.from_llm(llm, db, verbose=True, use_query_checker=Tr
 class OpenAIApiHandler(Resource):
   # def get(self, place):
   def post(self):
+    print("got request in OpenAIApiHandler")
     parser = reqparse.RequestParser()
     parser.add_argument('question', type=str)
 
